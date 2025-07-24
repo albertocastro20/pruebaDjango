@@ -30,13 +30,18 @@ Este método ha sido probado y es 100% funcional.
     python -m venv venv
     .\venv\Scripts\activate
     ```
+    NOTA: Si no se permite trabajar con el entorno virtual porque windows detiene la ejecución de scripts por medida de seguridad, ejecutar el siguiente comando:
 
-2.  **Instala las dependencias:**
+    ```bash
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+    ```
+
+3.  **Instala las dependencias:**
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Ejecuta las migraciones y el servidor:**
+4.  **Ejecuta las migraciones y el servidor:**
     ```bash
     python manage.py migrate
     python manage.py runserver
